@@ -1,0 +1,38 @@
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+*.iml
+
+# --- Node (if you ever add tooling / build scripts) ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# --- Build / output ---
+dist/
+build/
+out/
+public/
+_gh-pages/
+
+# --- Logs & temp ---
+*.log
+*.tmp
+.cache/
+.parcel-cache/
+.tmp/
+
+# --- Python (static server helpers) ---
+__pycache__/
+*.pyc
+
+# --- Environment / secrets ---
+.env
+.env.*
+!.env.example
