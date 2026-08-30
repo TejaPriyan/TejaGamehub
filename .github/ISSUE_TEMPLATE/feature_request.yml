@@ -1,0 +1,51 @@
+name: ✨ Feature request
+description: Suggest an idea or improvement for Teja Game Hub
+title: "[FEATURE]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement! Tell us what problem it solves.
+
+  - type: input
+    id: title
+    attributes:
+      label: Feature title
+      description: Short, one-line summary of the feature.
+      placeholder: e.g. Add local high-score persistence
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem it solves
+      description: Is your feature request related to a problem? Describe it.
+      placeholder: e.g. Scores are lost when the page refreshes...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: Describe the solution you'd like.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any alternative solutions or features you've considered.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched existing issues to avoid duplicates
+          required: true
+        - label: I am willing to help implement this feature (optional)
+          required: false
