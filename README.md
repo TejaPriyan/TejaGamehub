@@ -2,9 +2,10 @@
 
 # ⚡ Teja Gaming Hub <sub><sup>v3</sup></sub>
 
-**A neon-cyberpunk arcade of 11 fully playable mini-games — one single-page web app.**
+**A neon-cyberpunk arcade of 15 fully playable mini-games — one single-page web app.**
 No build step. No dependencies. Just open `index.html` in a browser and play.
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-GitHub_Pages-00f5ff?style=for-the-badge&logo=github)](https://tejapriyan.github.io/TejaGamehub/)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -17,149 +18,64 @@ No build step. No dependencies. Just open `index.html` in a browser and play.
 ## 📖 About
 
 **Teja Gaming Hub** is a self-contained retro-futuristic gaming arcade wrapped in a neon,
-synthwave aesthetic. It's a single `index.html` file — all the layout, styling, and game
-logic live in one document, which makes it trivially easy to run, host, or fork.
+synthwave aesthetic. It is built as a pure, zero-dependency single-file web application —
+all layout, styling, 3D animations, and game logic run instantly in any modern browser without any external build tooling.
 
-From a full **chess** engine with a minimax AI to a **rhythm game** played on the `D F J K`
-keys, there are 11 games to choose from. Custom cursor trails, a manga-style intro animation,
-a per-game character card generator, and a session scoreboard round out the experience.
+Features a real-time **3D Cyber Wave Matrix** background, **True Fullscreen Mode**,
+**Anti-Scroll Event Locking** to ensure browser windows never accidentally scroll during high-octane gameplay, **Mobile Virtual Controls**, **Instant Search & Category Filtering**, and **15 Playable Games**.
 
-> ✨ **Tip:** Host it for free on **GitHub Pages** (see the [Deploy](#-deploy-to-github-pages)
-> section) or just double-click `index.html` to play right now.
+> 🚀 **Live Game Arena:** [https://tejapriyan.github.io/TejaGamehub/](https://tejapriyan.github.io/TejaGamehub/)
 
 ---
 
-## 🕹️ Games
+## 🕹️ All 15 Games
 
-| # | Game | Type / Tag | Description |
-|---|------|------------|-------------|
-| 1 | **Neon Snake** | Arcade | Guide your neon serpent. Eat, grow, survive. |
-| 2 | **Cyber Pong** | Retro | Classic neon pong vs. the AI. First to 7. Challenge a friend — two-player and AI modes. |
-| 3 | **Memory Matrix** | Puzzle | Match holographic emoji pairs. |
-| 4 | **Tetrix Cyber** | Puzzle | Stack neon blocks, clear lines. |
-| 5 | **Flappy Cyber** | Action | Navigate cyber-gates. Tap to flap. |
-| 6 | **Reaction Protocol** | Reflex | Click the instant it turns green. |
-| 7 | **Space Shooter** | Bullet Hell | Bullet-hell anime space combat. |
-| 8 | **Typing Speed Race** | Typing | Race the clock. WPM tracked live. |
-| 9 | **2048 Neon Grid** | Puzzle | Merge neon tiles, reach 2048. |
-| 10 | **Cyber Chess** | Strategy | Full chess vs. minimax AI with neon glow pieces. |
-| 11 | **Guitar Hero Neon** | Rhythm | Hit falling neon notes on beat — `D F J K` keys. |
-
-> Control hints are shown on-screen inside each game, and the games support **touch
-> controls** (a virtual joystick and tap keys) for mobile play.
-
----
-
-## ✨ Features
-
-- 🎮 **11 working mini-games** — all playable immediately, no install or build tooling.
-- 🌌 **Neon / cyberpunk theme** — glowing borders, glass panels, and animated background canvas.
-- 🖱️ **Custom cursor & trail** — a glowing dot that follows your pointer everywhere.
-- 📖 **Manga-style intro** — a splash animation you can skip with one click.
-- 🃏 **Character card generator** — spin up a random avatar, name, level, XP, and badges.
-- 🏆 **Session scoreboard** — see the top players across the games.
-- 🎵 **In-browser sound effects** — Web Audio API, no audio files required.
-- 📱 **Responsive + touch-friendly** — virtual joystick and tap controls on mobile.
+| # | Game | Category | Description |
+|---|------|----------|-------------|
+| 1 | **Cyber Blade** ⚡*NEW* | Action / Slicer | High-speed neon fruit-ninja style slashing. Slice energy cores with mouse/touch drag, avoid glitch bombs! |
+| 2 | **Neon Drift Racer** ⚡*NEW* | Arcade / Racing | Retro-synthwave highway racer. Dodge traffic drones, grab batteries, and activate Hyper Turbo Nitro! |
+| 3 | **Orbital Nexus 360** ⚡*NEW* | Action / Defense | 360-degree core defense. Aim the orbiting plasma turret, blast enemy swarms, and trigger EMP shockwaves. |
+| 4 | **Chroma Shift Runner** ⚡*NEW* | Rhythm / Reflex | High-speed phase runner. Switch avatar color phases (Cyan, Pink, Gold) to match incoming laser gates. |
+| 5 | **Neon Snake** | Arcade / Retro | Guide your glowing serpent, eat energy orbs, and survive without crashing into yourself. |
+| 6 | **Cyber Pong** | Retro / Arcade | Classic neon pong vs intelligent computer AI. First to 7 points wins. |
+| 7 | **Space Shooter** | Action / Bullet Hell | Bullet-hell anime space combat against escalating alien waves. |
+| 8 | **Guitar Hero Neon** | Rhythm | Hit falling neon notes on beat using `D F J K` keys with live combo scoring. |
+| 9 | **Tetrix Cyber** | Puzzle / Retro | Stack neon tetromino blocks, clear lines, and build high-scoring combos. |
+| 10 | **Cyber Chess** | Strategy | Complete chess engine vs Minimax AI with holographic neon pieces and move validation. |
+| 11 | **Flappy Cyber** | Action / Arcade | Navigate floating cyber-gates with laser sensors. Tap or press space to flap. |
+| 12 | **2048 Neon Grid** | Puzzle / Strategy | Merge neon number tiles using arrow keys or swipe gestures to reach the 2048 tile. |
+| 13 | **Memory Matrix** | Puzzle | Match holographic cyberpunk emoji pairs under time pressure. |
+| 14 | **Typing Speed Race** | Action / Reflex | Race against the cyber clock with live WPM calculation and accuracy metrics. |
+| 15 | **Reaction Protocol** | Reflex | Test your raw reflexes: click or tap the exact millisecond the sensor turns green. |
 
 ---
 
-## 🚀 Getting Started
+## ✨ Features & Upgrades
 
-### Clone
-
-```bash
-git clone https://github.com/TejaPriyan/TejaGamehub.git
-cd TejaGamehub
-```
-
-### Run
-
-There is **no build step**. Either:
-
-1. Double-click `index.html`, or
-2. Serve it locally with any static file server:
-
-```bash
-# Python
-python3 -m http.server 8080
-# then open http://localhost:8080
-
-# Node.js
-npx serve .
-```
+- 🌊 **Interactive 3D Cyber Wave Background:** Perspective wireframe grid with multi-harmonic sine waves, horizon vanishing point, camera sway, and reactive mouse/touch parallax.
+- ⛶ **Dedicated Fullscreen Mode:** Play games in true arcade cabinet fullscreen with automatic responsive canvas scaling.
+- 🔒 **Anti-Scroll Event Protection:** Game keys (Arrow keys, Spacebar, WASD) are strictly captured during play so the webpage never scrolls outside.
+- 📱 **Mobile & Touch Friendly:** Ergonomic on-screen virtual D-Pad, dedicated action buttons, and native canvas touch gestures (swipe slicing, direct touch steering, and aim).
+- 🔍 **Instant Search & Category Filters:** Quickly search all 15 games by name or filter by Action, Arcade, Puzzle, Retro, Strategy, and Rhythm.
+- 🔊 **Web Audio Synthesizer:** Real-time procedural audio effects for laser shots, blade slashes, engine turbo, and chords with an instant mute toggle.
+- 🏆 **Persistent Scoreboard:** Automatically tracks and saves top high scores in local storage.
+- 🪪 **Esports Player License:** Generate custom 3D holographic player cards with rank, stats, and animated badges.
 
 ---
 
-## ☁️ Deploy to GitHub Pages
+## 🚀 Quick Start
 
-Since this is a dependency-free static page, deploying to **GitHub Pages** takes just a couple
-of clicks:
-
-1. Push this repo to GitHub.
-2. Go to **Settings → Pages**.
-3. Set **Source** to **Deploy from a branch**.
-4. Choose the `main` branch and the `/ (root)` folder.
-5. Save. Your site goes live at `https://<username>.github.io/TejaGamehub/`.
-
-Alternatively, host it anywhere a static file can be served — Netlify, Vercel, Cloudflare
-Pages, or a simple static server.
-
----
-
-## 🗂️ Project Structure
-
-```
-TejaGamehub/
-├── index.html               # The entire app (markup + styles + game logic)
-├── README.md                # You are here
-├── LICENSE                  # MIT License
-├── .gitignore
-├── SECURITY.md
-├── CONTRIBUTING.md
-├── CODE_OF_CONDUCT.md
-└── .github/
-    ├── ISSUE_TEMPLATE/      # Bug report & feature request templates
-    └── PULL_REQUEST_TEMPLATE.md
-```
-
----
-
-## 🧰 Tech Stack
-
-- **HTML5** & **CSS3** — layout, neon styling, animations, responsiveness
-- **Vanilla JavaScript** — all game engines (Canvas 2D + DOM), Web Audio API sounds
-- **Google Fonts** — [Orbitron](https://fonts.google.com/specimen/Orbitron),
-  [Rajdhani](https://fonts.google.com/specimen/Rajdhani), and
-  [Bangers](https://fonts.google.com/specimen/Bangers)
-- **Zero dependencies** — no framework, no bundler, no package manager required
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) and
-[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) before getting started. If you find a bug or have an
-idea, open an [issue](https://github.com/TejaPriyan/TejaGamehub/issues).
-
----
-
-## 🔒 Security
-
-Please report any security vulnerabilities privately. See
-[SECURITY.md](SECURITY.md) for details. **Do not** open a public issue for a security problem.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/TejaPriyan/TejaGamehub.git
+   ```
+2. **Open and play:**
+   Simply double-click `index.html` or open it in any web browser (Chrome, Edge, Firefox, Safari). No installation or build steps required!
 
 ---
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
----
-
-<div align="center">
-
-Made with 💜 by **[Teja Priyan](https://github.com/TejaPriyan)** ·
-[Report a bug](https://github.com/TejaPriyan/TejaGamehub/issues/new) ·
-⭐ Star the repo if you enjoy it!
-
-</div>
+Developed by [Teja Priyan](https://github.com/TejaPriyan).
