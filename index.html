@@ -60,6 +60,7 @@
         "url": "https://portfoliotejapriyan.vercel.app/",
         "jobTitle": "AI Engineer & Full Stack Developer",
         "sameAs": [
+          "https://tejagamehub.vercel.app/",
           "https://github.com/TejaPriyan",
           "https://huggingface.co/teja161615",
           "https://portfoliotejapriyan.vercel.app/"
@@ -375,9 +376,88 @@ footer span{background:linear-gradient(90deg,var(--neon-purple),var(--neon-cyan)
 @media(max-width:768px){nav{padding:.8rem 1.2rem;}.nav-pills{display:none;}.nav-links{gap:1rem;}.nav-links a{font-size:.8rem;}.hero-title{font-size:1.9rem;}.card-stats{grid-template-columns:1fr 1fr;}.games-grid{grid-template-columns:1fr;}.modal-header{padding:.7rem 1rem;}.btn-fullscreen{font-size:.65rem;padding:.35rem .6rem;}}
 @media(max-width:480px){.nav-links{display:none;}.player-form-wrap{padding:1.5rem;}.games-toolbar{gap:.8rem;}.filter-tabs{gap:.4rem;}.tab-btn{font-size:.65rem;padding:.35rem .8rem;}}
 @media(hover:none){body{cursor:auto;}#cursor,#cursor-trail{display:none;}}
-  </style>
+  
+/* ================================================================
+   TEJA GAMING HUB CINEMATIC INTRO
+================================================================ */
+#teja-intro{
+  position:fixed;inset:0;z-index:100000;background:#04040d;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+#teja-intro canvas{position:absolute;inset:0;}
+.intro-content{position:relative;z-index:2;text-align:center;pointer-events:none;padding:1.5rem;max-width:850px;}
+.intro-badge{
+  display:inline-block;padding:.35rem 1.2rem;border-radius:20px;
+  border:1px solid rgba(0,245,255,.5);color:var(--neon-cyan);
+  font-family:var(--font-main);font-size:.74rem;letter-spacing:3px;
+  margin-bottom:1.2rem;opacity:0;transform:translateY(-15px);
+  transition:all .6s ease;background:rgba(0,245,255,.1);
+}
+.intro-badge.show{opacity:1;transform:translateY(0);}
+.intro-logo{
+  font-family:var(--font-main);font-size:clamp(2.4rem,8vw,5.5rem);font-weight:900;
+  letter-spacing:6px;text-transform:uppercase;
+  background:linear-gradient(90deg,var(--neon-purple),var(--neon-cyan),var(--neon-pink));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  opacity:0;transform:scale(.75);
+  filter:drop-shadow(0 0 35px rgba(0,245,255,.6));
+  transition:opacity .7s ease,transform .7s cubic-bezier(0.16,1,0.3,1);
+}
+.intro-logo.show{opacity:1;transform:scale(1);}
+.intro-sub{
+  font-family:var(--font-main);font-size:clamp(.85rem,2.2vw,1.15rem);letter-spacing:4px;
+  color:var(--text-dim);opacity:0;margin-top:1rem;transition:opacity .6s ease .3s;text-transform:uppercase;
+}
+.intro-sub.show{opacity:1;}
+.intro-bar-wrap{
+  margin:2.2rem auto 0;width:min(340px,80vw);height:5px;background:rgba(255,255,255,.1);
+  border-radius:3px;overflow:hidden;opacity:0;transition:opacity .4s ease .5s;
+}
+.intro-bar-wrap.show{opacity:1;}
+.intro-bar{
+  height:100%;width:0;background:linear-gradient(90deg,var(--neon-purple),var(--neon-cyan),var(--neon-pink));
+  border-radius:3px;transition:width 1.8s cubic-bezier(0.22,1,0.36,1);
+  box-shadow:0 0 15px var(--neon-cyan);
+}
+.intro-bar.fill{width:100%;}
+.intro-status{
+  font-family:var(--font-body);font-size:.9rem;color:var(--neon-cyan);
+  letter-spacing:2px;margin-top:.8rem;opacity:0;transition:opacity .4s ease .6s;
+}
+.intro-status.show{opacity:1;}
+.intro-skip{
+  position:absolute;bottom:2rem;right:2rem;font-family:var(--font-main);
+  font-size:.74rem;color:var(--text-dim);letter-spacing:2px;cursor:pointer;
+  border:1px solid rgba(0,245,255,.35);padding:.5rem 1.2rem;border-radius:8px;
+  transition:all .3s;pointer-events:all;background:rgba(5,5,18,.8);
+  backdrop-filter:blur(8px);
+}
+.intro-skip:hover{
+  color:var(--neon-cyan);border-color:var(--neon-cyan);box-shadow:var(--glow-cyan);
+}
+
+</style>
 </head>
 <body>
+
+<!-- ================================================================
+     TEJA GAMING HUB CINEMATIC INTRO
+================================================================ -->
+<div id="teja-intro">
+  <canvas id="intro-canvas"></canvas>
+  <div class="intro-content">
+    <div class="intro-badge">⚡ TEJA ESPORTS CYBER MATRIX ⚡</div>
+    <div class="intro-logo" id="intro-logo">TEJA GAMING HUB</div>
+    <div class="intro-sub" id="intro-sub">NEXT-GEN CYBER ARCADE // 15 MINI-GAMES ARENA</div>
+    <div class="intro-bar-wrap" id="intro-bar-wrap">
+      <div class="intro-bar" id="intro-bar"></div>
+    </div>
+    <div class="intro-status" id="intro-status">INITIALIZING SYSTEM MATRIX...</div>
+  </div>
+  <div class="intro-skip" id="intro-skip">SKIP ▶</div>
+</div>
+
 
 <div id="cursor"></div>
 <div id="cursor-trail"></div>
@@ -718,6 +798,89 @@ footer span{background:linear-gradient(90deg,var(--neon-purple),var(--neon-cyan)
      JAVASCRIPT
 ================================================================ -->
 <script>
+
+/* ============================================================
+   TEJA GAMING HUB CINEMATIC INTRO
+============================================================ */
+(function launchTejaIntro(){
+  const intro=document.getElementById('teja-intro');
+  if(!intro)return;
+  const cv=document.getElementById('intro-canvas');
+  const ctx=cv.getContext('2d');
+  let W,H,particles=[],beams=[],done=false;
+  function resize(){W=cv.width=window.innerWidth;H=cv.height=window.innerHeight;}
+  window.addEventListener('resize',resize);resize();
+
+  for(let i=0;i<120;i++){
+    particles.push({
+      x:Math.random()*W,y:Math.random()*H,
+      vx:(Math.random()-.5)*1.8,vy:(Math.random()-.5)*1.8,
+      r:Math.random()*3+.6,hue:Math.random()>.5?280:190,
+      alpha:Math.random()*.8+.2
+    });
+  }
+  for(let i=0;i<8;i++){
+    beams.push({
+      angle:Math.random()*Math.PI*2,
+      speed:.006+Math.random()*.015,
+      len:Math.random()*350+200,
+      hue:Math.random()>.5?280:190
+    });
+  }
+
+  function draw(){
+    ctx.fillStyle='rgba(4,4,13,.15)';ctx.fillRect(0,0,W,H);
+    beams.forEach(b=>{
+      b.angle+=b.speed;
+      const x2=W/2+Math.cos(b.angle)*b.len,y2=H/2+Math.sin(b.angle)*b.len;
+      const gr=ctx.createLinearGradient(W/2,H/2,x2,y2);
+      gr.addColorStop(0,'hsla('+b.hue+',100%,60%,.4)');
+      gr.addColorStop(1,'transparent');
+      ctx.strokeStyle=gr;ctx.lineWidth=2.5;ctx.beginPath();
+      ctx.moveTo(W/2,H/2);ctx.lineTo(x2,y2);ctx.stroke();
+    });
+    particles.forEach(p=>{
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0)p.x=W;if(p.x>W)p.x=0;
+      if(p.y<0)p.y=H;if(p.y>H)p.y=0;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle='hsla('+p.hue+',100%,60%,'+p.alpha+')';
+      ctx.fill();
+    });
+    const cg=ctx.createRadialGradient(W/2,H/2,0,W/2,H/2,220);
+    cg.addColorStop(0,'rgba(180,79,255,.2)');
+    cg.addColorStop(.5,'rgba(0,245,255,.1)');
+    cg.addColorStop(1,'transparent');
+    ctx.fillStyle=cg;ctx.fillRect(0,0,W,H);
+    if(!done)requestAnimationFrame(draw);
+  }
+  draw();
+
+  setTimeout(()=>{
+    document.querySelector('.intro-badge')?.classList.add('show');
+    try{playSound('turbo');}catch(e){}
+  },150);
+  setTimeout(()=>document.getElementById('intro-logo')?.classList.add('show'),350);
+  setTimeout(()=>document.getElementById('intro-sub')?.classList.add('show'),650);
+  setTimeout(()=>{
+    document.getElementById('intro-bar-wrap')?.classList.add('show');
+    document.getElementById('intro-status')?.classList.add('show');
+    setTimeout(()=>document.getElementById('intro-bar')?.classList.add('fill'),50);
+  },850);
+
+  function dismissIntro(){
+    if(done)return;
+    done=true;
+    intro.style.transition='opacity .6s ease, transform .6s ease';
+    intro.style.opacity='0';
+    intro.style.transform='scale(1.05)';
+    setTimeout(()=>{intro.style.display='none';},600);
+  }
+
+  setTimeout(dismissIntro, 2700);
+  document.getElementById('intro-skip')?.addEventListener('click',dismissIntro);
+})();
+
 /* ============================================================
    AUDIO ENGINE WITH EXTENDED SYNTH SOUNDS & MUTE TOGGLE
 ============================================================ */

@@ -5,11 +5,16 @@
 **A neon-cyberpunk arcade of 15 fully playable mini-games — one single-page web app.**
 No build step. No dependencies. Just open `index.html` in a browser and play.
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-GitHub_Pages-00f5ff?style=for-the-badge&logo=github)](https://tejapriyan.github.io/TejaGamehub/)
+[![Live on Vercel](https://img.shields.io/badge/Live_App-Vercel-black?style=for-the-badge&logo=vercel)](https://tejagamehub.vercel.app/)
+[![Live on GitHub Pages](https://img.shields.io/badge/Live_Demo-GitHub_Pages-00f5ff?style=for-the-badge&logo=github)](https://tejapriyan.github.io/TejaGamehub/)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+### 🌐 Play Online:
+👉 **[https://tejagamehub.vercel.app/](https://tejagamehub.vercel.app/)**  
+👉 **[https://tejapriyan.github.io/TejaGamehub/](https://tejapriyan.github.io/TejaGamehub/)**
 
 </div>
 
@@ -21,10 +26,8 @@ No build step. No dependencies. Just open `index.html` in a browser and play.
 synthwave aesthetic. It is built as a pure, zero-dependency single-file web application —
 all layout, styling, 3D animations, and game logic run instantly in any modern browser without any external build tooling.
 
-Features a real-time **3D Cyber Wave Matrix** background, **True Fullscreen Mode**,
+Features a cinematic **Teja Gaming Hub Intro**, a real-time **3D Cyber Wave Matrix** background, **True Fullscreen Mode**,
 **Anti-Scroll Event Locking** to ensure browser windows never accidentally scroll during high-octane gameplay, **Mobile Virtual Controls**, **Instant Search & Category Filtering**, and **15 Playable Games**.
-
-> 🚀 **Live Game Arena:** [https://tejapriyan.github.io/TejaGamehub/](https://tejapriyan.github.io/TejaGamehub/)
 
 ---
 
@@ -52,6 +55,7 @@ Features a real-time **3D Cyber Wave Matrix** background, **True Fullscreen Mode
 
 ## ✨ Features & Upgrades
 
+- ⚡ **Teja Gaming Hub Cinematic Intro:** Holographic title reveal with glowing sound synthesis and smooth matrix entry.
 - 🌊 **Interactive 3D Cyber Wave Background:** Perspective wireframe grid with multi-harmonic sine waves, horizon vanishing point, camera sway, and reactive mouse/touch parallax.
 - ⛶ **Dedicated Fullscreen Mode:** Play games in true arcade cabinet fullscreen with automatic responsive canvas scaling.
 - 🔒 **Anti-Scroll Event Protection:** Game keys (Arrow keys, Spacebar, WASD) are strictly captured during play so the webpage never scrolls outside.
